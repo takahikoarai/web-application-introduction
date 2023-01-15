@@ -29,7 +29,7 @@
         @csrf
         <td><input type="text" name="todo" value="{{$todo->todo}}"></td>
         <td><input type="submit" value="更新"></td>
-        <!-- idをコントローラーに渡せていない？ -->
+        <!-- idをコントローラーに渡せていない？ルーティングもおかしい -->
       </form>
       <form action="delete" method="POST">
         @csrf
