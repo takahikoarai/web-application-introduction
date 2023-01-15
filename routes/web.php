@@ -19,3 +19,10 @@ use App\Http\Controllers\IndexController;
 // });
 
 Route::get('/', [IndexController::class, 'index']);
+Route::post('/', [IndexController::class, 'index']);
+Route::get('/create', [IndexController::class, 'create']);
+Route::post('/create', [IndexController::class, 'create']);
+Route::get('/update', [IndexController::class, 'update']);
+Route::post('/update', [IndexController::class, 'update']);
+Route::get('/delete', [IndexController::class, 'delete']);
+Route::post('/delete', [IndexController::class, 'delete']);

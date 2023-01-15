@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Todo;
 use Illuminate\Http\Request;
-use App\Https\Requests\TodoRequest;
+use App\Http\Requests\TodoRequest;
 
 class IndexController extends Controller
 {
@@ -31,7 +31,7 @@ class IndexController extends Controller
 
     public function delete(Request $request)
     {   
-        Todo::find($reqeust->id)->delete();
+        Todo::find($request->id)->delete();
         return redirect('/');
     }
 }
