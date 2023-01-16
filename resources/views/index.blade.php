@@ -21,23 +21,22 @@
       <th>更新</th>
       <th>削除</th>
     </tr>
-    {{-- @if (@isset($todo)) --}}
     @foreach ($todos as $todo)
     <tr>
       <td>{{$todo->updated_at}}</td>
       <form action="update" method="POST">
         @csrf
         <td><input type="text" name="todo" value="{{$todo->todo}}"></td>
-        <td><input type="submit" value="更新"></td>
+        <td><input type="submit" name="id" value="更新"></td>
         <!-- idをコントローラーに渡せていない？ルーティングもおかしい -->
       </form>
       <form action="delete" method="POST">
         @csrf
-        <td><input type="submit" value="削除"></td>
-        <!-- idをコントローラーに渡せていない？ -->
+        <td>
+          <input type="hidden" name="id" value="{{ $todo->id }}">
+          <input type="submit" value="削除"></td>
       </form>
     </tr>
-    {{-- @endif --}}
     @endforeach
   </table>
 </body>
