@@ -26,7 +26,7 @@ class IndexController extends Controller
         $todo = $request->all();
         unset($todo['_token']);
         Todo::where('id', $request->id)->update($todo);
-        return redirect('(/');
+        return redirect('/');
     }
 
     public function delete(Request $request)
