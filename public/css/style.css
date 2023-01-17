@@ -11,8 +11,9 @@ body {
 }
 
 h1,
-th {
-  font-family: 'Playfair Display', serif;
+th,
+.todo-date {
+  font-family: 'Lora', serif;
 }
 
 h1{
@@ -29,6 +30,48 @@ h1{
   height: 20px;
 }
 
+.btn{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 9px;
+}
+
 .todo-add__btn {
   margin-left: 30px;
+  color: #FF00FF;
+  border-color: #FF00FF;
+}
+
+table{
+  margin: 0 auto;
+}
+
+th{
+  height: 30px;
+}
+
+.todo-row{
+  height: 40px;
+}
+
+.todo-date{
+  font-size: 12px;
+}
+
+.todo-name{
+  margin-left: 30px;
+  width: 200px;
+}
+
+.todo-update__btn{
+  color: orange;
+  border-color: orange;
+  margin-left: 20px;
+}
+
+.todo-delete__btn{
+  color: aqua;
+  border-color: aqua;
+  margin-left: 20px;
 }

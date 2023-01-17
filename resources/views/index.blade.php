@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="body__inner">
@@ -17,7 +17,7 @@
     <form action="create" method="POST" class="todo-add">
       @csrf
       <input type="text" name="todo" class="todo-add__input">
-      <input type="submit" value="追加" class="todo-add__btn">
+      <input type="submit" value="追加" class="todo-add__btn btn">
     </form>
     <table>
       <tr>
@@ -27,21 +27,21 @@
         <th>削除</th>
       </tr>
       @foreach ($todos as $todo)
-      <tr>
-        <td>{{$todo->updated_at}}</td>
+      <tr class="todo-row">
+        <td class="todo-date">{{$todo->updated_at}}</td>
         <form action="update" method="POST">
           @csrf
-          <td><input type="text" name="todo" value="{{$todo->todo}}"></td>
+          <td><input type="text" name="todo" value="{{$todo->todo}}" class="todo-name"></td>
           <td>
             <input type="hidden" name="id" value="{{$todo->id}}">
-            <input type="submit" value="更新">
+            <input type="submit" value="更新" class="todo-update__btn btn">
           </td>
         </form>
         <form action="delete" method="POST">
           @csrf
           <td>
             <input type="hidden" name="id" value="{{$todo->id}}">
-            <input type="submit" value="削除">
+            <input type="submit" value="削除" class="todo-delete__btn btn">
           </td>
         </form>
       </tr>
