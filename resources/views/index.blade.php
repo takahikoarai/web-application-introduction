@@ -14,8 +14,14 @@
 <body>
   <div class="body__inner">
     <h1>Todo List</h1>
+    @if(count($errors) > 0)
+      <p class="error">入力に問題があります</p>
+    @endif
     <form action="create" method="POST" class="todo-add">
       @csrf
+      @error('todo')
+        <p class="error">{{$message}}</p>
+      @enderror
       <input type="text" name="todo" class="todo-add__input">
       <input type="submit" value="追加" class="todo-add__btn btn">
     </form>
