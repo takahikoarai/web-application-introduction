@@ -45,14 +45,34 @@ h1{
 
 table{
   margin: 0 auto;
+  width: 90%;
 }
 
 th{
   height: 30px;
+  text-align: center;
+}
+
+th:nth-child(1),
+td:nth-child(1){
+  width: 30%;
+}
+
+th:nth-child(2),
+td:nth-child(2){
+  width: 50%;
+}
+
+th:nth-child(3),
+th:nth-child(4),
+td:nth-child(3),
+td:nth-child(4) {
+  width: 10%;
 }
 
 .todo-row{
   height: 40px;
+  text-align: center;
 }
 
 .todo-date{
@@ -60,18 +80,15 @@ th{
 }
 
 .todo-name{
-  margin-left: 30px;
   width: 200px;
 }
 
 .todo-update__btn{
   color: orange;
   border-color: orange;
-  margin-left: 20px;
 }
 
 .todo-delete__btn{
   color: aqua;
   border-color: aqua;
-  margin-left: 20px;
 }
